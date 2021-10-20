@@ -5,9 +5,21 @@ using UnityEngine;
 public class HeroInput : MonoBehaviour
 {
     
+    public void Update ()
+    {
+        
+        if (Input.GetKey(KeyCode.A)) 
+        {
+
+        }else if(Input.GetKey(KeyCode.D))
+
+        {
+            
+        }
+
+    }
 
 
 
 
-    
 }
