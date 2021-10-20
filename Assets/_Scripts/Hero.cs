@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    public 
+    public void SetDirection(float direction);
 }
