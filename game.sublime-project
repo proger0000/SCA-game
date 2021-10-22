@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "./Assets/_Scripts",
-			"file_exclude_patterns": ["*.meta"]
+			"file_exclude_patterns": ["*.meta", "*.dll"]
 		},
 	],
 	"solution_file": "./game"
