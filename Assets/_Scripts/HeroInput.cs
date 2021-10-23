@@ -12,19 +12,9 @@ public class HeroInput : MonoBehaviour
     }
     public void Update ()
     {
-        
-        if (Input.GetKey(KeyCode.A)) 
-        {
-            _hero.SetDirection(-1);
+        var horizontal = Input.GetAxis("Horizontal");
+        _hero.SetDirection(horizontal);
 
-        }else if(Input.GetKey(KeyCode.D))
-        {
-            _hero.SetDirection(1);
-        }
-        else
-        {
-            _hero.SetDirection(0);
-        }
 
     }
 
