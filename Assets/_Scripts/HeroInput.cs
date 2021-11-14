@@ -4,21 +4,7 @@ using UnityEngine;
 
 public class HeroInput : MonoBehaviour
 {
-    private Hero _hero;
-
-    private void Awake()
-    {
-        _hero = GetComponent<Hero>();
+    private void Awake( ){
+        
     }
-    public void Update ()
-    {
-        var horizontal = Input.GetAxis("Horizontal");
-        _hero.SetDirection(horizontal);
-
-
-    }
-
-
-
-
 }
