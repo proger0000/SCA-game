@@ -1,35 +1,24 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-namespace PixelCrew
+namespace _Scripts
 {
     public class HeroInputReader : MonoBehaviour
     {
         [SerializeField] private Hero _hero;
-        private HeroInputAction _inputActions;
-        private void Awake()
+
+        public void OnMovement(InputAction.CallbackContext context)
         {
-            _inputActions = new HeroInputAction();
-            _inputActions.Hero.Movement.performed += OnHorizontalMovement;
-            _inputActions.Hero.Movement.canceled += OnHorizontalMovement;
-            _inputActions.Hero.SaySomething.performed += OnSaySomething;
-        }
-    
-        private void OnEnable()
-        {
-            _inputActions.Enable();
-        }
-    
-        public void OnHorizontalMovement(InputAction.CallbackContext context)
-        {
-            var direction = context.ReadValue();
+            var direction = context.ReadValue<Vector2>();
             _hero.SetDirection(direction);
         }
-    
+
         public void OnSaySomething(InputAction.CallbackContext context)
         {
-            _hero.SaySomething();
+            if (context.canceled)
+            {
+                _hero.SaySomething();
+            }
         }
     }
 }
