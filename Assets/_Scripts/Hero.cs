@@ -12,8 +12,8 @@ namespace _Scripts
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpSpeed;
+        
         [SerializeField] private LayerMask _groundLayer;
-
         [SerializeField] private float _groundCheckRadius;
         [SerializeField] private Vector3 _groundCheckPositionDelta;
 
